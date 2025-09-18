@@ -45,7 +45,7 @@ export const PlantationList: React.FC<PlantationListProps> = ({
     return (
       <Card className="shadow-surface">
         <CardHeader>
-          <CardTitle>Your Plantations</CardTitle>
+          <CardTitle>Plantations Registered</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           {[1, 2, 3].map((i) => (
@@ -62,10 +62,10 @@ export const PlantationList: React.FC<PlantationListProps> = ({
   return (
     <Card className="shadow-surface">
       <CardHeader>
-        <CardTitle>Your Plantations</CardTitle>
-        <p className="text-sm text-muted-foreground">
+        <CardTitle>Plantations Registered ({plantations.length})</CardTitle>
+        {/* <p className="text-sm text-muted-foreground">
           {plantations.length} plantation{plantations.length !== 1 ? 's' : ''} registered
-        </p>
+        </p> */}
       </CardHeader>
       <CardContent className="space-y-4">
         {plantations.length === 0 ? (
