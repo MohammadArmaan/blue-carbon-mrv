@@ -12,8 +12,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { TreePine, Coins, Activity, Users, Shield, FileText, ShoppingCart } from "lucide-react";
+import { TreePine, Coins, Activity, Users, Shield, FileText, ShoppingCart, BookUserIcon } from "lucide-react";
 import heroImage from "@/assets/blue-carbon-hero.jpg";
+import { CONTRACT_ADDRESSES } from "@/lib/web3";
 
 export const Dashboard = () => {
   const { account, balance, carbonCreditBalance, events } = useWeb3();
@@ -94,28 +95,39 @@ export const Dashboard = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-card/95 backdrop-blur-sm border-warning/20">
+          <Card className="bg-card/95 backdrop-blur-sm border-ocean-surface/30">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Active Events</CardTitle>
-              <Activity className="h-4 w-4 text-muted-foreground" />
+              <div className="flex items-center gap-3">
+
+              <CardTitle className="text-sm font-medium">Contract Addresses</CardTitle>
+
+                <Badge variant="default" className="bg-blue-500 hover:bg-blue/90 cursor-pointer">Live</Badge>
+              </div>
+              <BookUserIcon className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-warning">{events.length}</div>
-              <p className="text-xs text-muted-foreground">Recent activity</p>
+            <CardContent className="flex flex-col">
+                <a href={`https://sepolia.etherscan.io/address/${CONTRACT_ADDRESSES.PLANTATION_REGISTRY}`} className="hover:underline font-bold" target="_blank">{CONTRACT_ADDRESSES.PLANTATION_REGISTRY?.slice(0, 15)}...{account?.slice(-6)}</a>
+                <a href={`https://sepolia.etherscan.io/address/${CONTRACT_ADDRESSES.CARBON_CREDIT}`} className="hover:underline font-bold" target="_blank">{CONTRACT_ADDRESSES.CARBON_CREDIT?.slice(0, 15)}...{account?.slice(-6)}</a>
+              <p className="text-xs text-muted-foreground">
+                Contract Addresses
+              </p>
             </CardContent>
           </Card>
 
           <Card className="bg-card/95 backdrop-blur-sm border-ocean-surface/30">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <div className="flex items-center gap-3">
+
               <CardTitle className="text-sm font-medium">Connected</CardTitle>
+
+                <Badge variant="default" className="bg-green-500 hover:bg-green/90 cursor-pointer">Active</Badge>
+              </div>
               <Users className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-ocean-surface">
-                <Badge variant="default" className="bg-success">Active</Badge>
-              </div>
+                <a href={`https://sepolia.etherscan.io/address/${account}`} className="hover:underline font-bold" target="_blank">{account?.slice(0, 15)}...{account?.slice(-6)}</a>
               <p className="text-xs text-muted-foreground">
-                {account?.slice(0, 6)}...{account?.slice(-4)}
+                Account Address
               </p>
             </CardContent>
           </Card>
