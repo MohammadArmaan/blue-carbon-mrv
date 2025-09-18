@@ -1,6 +1,6 @@
 # 🌊 Blue Carbon MRV System (Prototype)
 
-[![Deploy to Vercel](https://vercel.com/button)](https://blue-carbon-mrv.vercel.app)
+[![Deploy to Vercel](https://vercel.com/button)](https://blue-carbon-mrv-project.vercel.app)
 
 A **prototype Monitoring, Reporting & Verification (MRV) system** for Blue Carbon projects.  
 It leverages **blockchain + web3** to ensure transparency in plantation tracking, verification, and carbon credit issuance.
@@ -35,7 +35,7 @@ It leverages **blockchain + web3** to ensure transparency in plantation tracking
 - **Frontend:** React (Vite), TailwindCSS, shadcn/ui  
 - **Blockchain:** Solidity Smart Contracts (Plantation Registry, Carbon Credit Token)  
 - **Web3 Integration:** ethers.js + custom `contractService`  
-- **Deployment:** Vercel ([blue-carbon-mrv.vercel.app](https://blue-carbon-mrv.vercel.app))  
+- **Deployment:** Vercel ([blue-carbon-mrv-project.vercel.app](https://blue-carbon-mrv-project.vercel.app))  
 
 ---
 
