@@ -1,73 +1,86 @@
-# Welcome to your Lovable project
+# 🌊 Blue Carbon MRV System (Prototype)
 
-## Project info
+[![Deploy to Vercel](https://vercel.com/button)](https://blue-carbon-mrv.vercel.app)
 
-**URL**: https://lovable.dev/projects/6670ff02-13da-4bb6-90dd-666f9609e8a6
+A **prototype Monitoring, Reporting & Verification (MRV) system** for Blue Carbon projects.  
+It leverages **blockchain + web3** to ensure transparency in plantation tracking, verification, and carbon credit issuance.
 
-## How can I edit this code?
+> ⚠️ **Note:** This is a **prototype developed for Smart India Hackathon 2025**.  
+> It is **not production-ready** and should not be used for real financial or environmental reporting.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6670ff02-13da-4bb6-90dd-666f9609e8a6) and start prompting.
+- **Plantation Registration**  
+  Stakeholders (implementers) can register new plantations with details (location, ecosystem type, area, date).
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Verification Workflow**  
+  Admins/Verifiers can review pending plantations and either approve or reject them.  
+  Upon approval, **carbon credits (ERC20 tokens)** are minted to the implementer.
 
-**Use your preferred IDE**
+- **Blockchain Integration**  
+  All verification and token minting is handled via smart contracts for immutability and transparency.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **User Wallet Connection**  
+  Uses Web3 wallet (e.g., MetaMask) for authentication and transactions.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **UI Components**  
+  Built with **React, TailwindCSS, shadcn/ui**, and deployed on **Vercel**.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🏗️ Tech Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **Frontend:** React (Vite), TailwindCSS, shadcn/ui  
+- **Blockchain:** Solidity Smart Contracts (Plantation Registry, Carbon Credit Token)  
+- **Web3 Integration:** ethers.js + custom `contractService`  
+- **Deployment:** Vercel ([blue-carbon-mrv.vercel.app](https://blue-carbon-mrv.vercel.app))  
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🔑 User Roles
 
-**Use GitHub Codespaces**
+- **Implementer (Plantation Owner):**  
+  Registers new plantations for review.  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Verifier (Admin/NGO/Government):**  
+  Reviews plantations and approves or rejects them.  
+  On approval, carbon credits are automatically minted to the implementer.  
 
-## What technologies are used for this project?
+- **Buyer/Company (Future scope):**  
+  Can purchase carbon credits from verified projects.
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📜 Smart Contracts
 
-## How can I deploy this project?
+- **PlantationRegistry.sol**  
+  Stores plantation data and handles verification.  
 
-Simply open [Lovable](https://lovable.dev/projects/6670ff02-13da-4bb6-90dd-666f9609e8a6) and click on Share -> Publish.
+- **CarbonCreditToken.sol (ERC20)**  
+  Issues Blue Carbon Credits (BCC) to verified plantations.  
 
-## Can I connect a custom domain to my Lovable project?
+- **contractService.ts**  
+  Frontend integration layer for contract read/write functions.  
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## ⚠️ Disclaimer
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This is a **prototype created for Smart India Hackathon 2025** and is **not audited**.  
+Do not use for real-world carbon credit trading or financial transactions.  
+
+---
+
+## ✨ Future Improvements
+
+- Tokenized plantations as NFTs for traceability  
+- Marketplace for carbon credits  
+- On-chain reporting & monitoring data  
+- Enhanced verification workflows with multiple verifiers  
+- Geo-tagged satellite/IoT integration for plantation validation  
+
