@@ -73,14 +73,14 @@ export default function Page() {
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row items-start gap-4">
-                <Button asChild size="lg" className="bg-primary w-full hover:bg-primary/90 text-white px-8">
-                  <Link href="/plantation">Start Your Project</Link>
+                <Button asChild size="lg" className="bg-primary w-full hover:bg-primary/90 font-bold text-white px-8">
+                  <Link href="/registration">Register Now</Link>
                 </Button>
                 <Button
                   variant="outline"
                   asChild
                   size="lg"
-                  className="border-primary/20 w-full hover:bg-primary/30 bg-transparent"
+                  className="border-primary/30 hover:text-black w-full hover:bg-primary/30 bg-transparent"
                 >
                   <Link href="/marketplace">Explore Marketplace</Link>
                 </Button>
