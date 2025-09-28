@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -16,11 +16,43 @@ const inter = Inter({
   display: "swap",
 })
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // choose weights you need
+  variable: "--font-sans",
+  display: "swap",
+})
+
 export const metadata: Metadata = {
   title: "Blue Carbon MRV - Ocean Conservation Platform",
-  description: "A cutting-edge Web3 platform for Blue Carbon Monitoring, Reporting, and Verification",
-  generator: "v0.app",
+  description:
+    "A cutting-edge Web3 platform for Blue Carbon Monitoring, Reporting, and Verification",
+  openGraph: {
+    title: "Blue Carbon MRV - Ocean Conservation Platform",
+    description:
+      "A cutting-edge Web3 platform for Blue Carbon Monitoring, Reporting, and Verification",
+    url: "https://blue-carbon-mrv-project.vercel.app/", 
+    siteName: "Blue Carbon MRV",
+    images: [
+      {
+        url: "/logo.png", 
+        width: 500,
+        height: 500,
+        alt: "Blue Carbon MRV Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blue Carbon MRV - Ocean Conservation Platform",
+    description:
+      "A cutting-edge Web3 platform for Blue Carbon Monitoring, Reporting, and Verification",
+    images: ["/logo.png"],
+  },
 }
+
 
 export default function RootLayout({
   children,
@@ -28,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${poppins.variable} antialiased`}>
       <body className="font-sans antialiased">
         <Suspense fallback={<div>Loading...</div>}>
           <WalletProvider>

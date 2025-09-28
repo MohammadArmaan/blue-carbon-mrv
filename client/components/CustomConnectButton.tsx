@@ -37,7 +37,6 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { motion, AnimatePresence } from "framer-motion";
-import { contractService } from "@/lib/contracts";
 
 export function CustomConnectButton() {
     const { address, isConnected } = useAccount();
