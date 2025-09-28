@@ -32,7 +32,7 @@ It leverages **blockchain + web3** to ensure transparency in plantation tracking
 
 ## 🏗️ Tech Stack
 
-- **Frontend:** React (Vite), TailwindCSS, shadcn/ui  
+- **Frontend:** Nextjs + React, TailwindCSS, shadcn/ui  
 - **Blockchain:** Solidity Smart Contracts (Plantation Registry, Carbon Credit Token)  
 - **Web3 Integration:** ethers.js + custom `contractService`  
 - **Deployment:** Vercel ([blue-carbon-mrv-project.vercel.app](https://blue-carbon-mrv-project.vercel.app))  
