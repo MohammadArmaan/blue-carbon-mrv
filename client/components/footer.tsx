@@ -15,7 +15,7 @@ export function Footer() {
                         Github Repo
                     </a>
                     <a
-                        href="https://sepolia.etherscan.io/token/0xf8a2226c8f93c8552ff5dacb839998c0e846e77c?a=0x6fcD6344267F2D7C4D09914437A06ceF3Fc2E304"
+                        href="https://sepolia.etherscan.io/token/0xf8a2226c8f93c8552ff5dacb839998c0e846e77c"
                         target="_blank"
                         rel="noreferrer"
                         className="hover:text-primary"
